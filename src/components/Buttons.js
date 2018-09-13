@@ -2,9 +2,6 @@ import React from 'react';
 
 class Buttons extends React.Component {
 
-	handleSelect = (evt) => {
-		this.props.gridSize(evt);
-	}
 
 	render() {
 		return (

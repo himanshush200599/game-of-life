@@ -1,6 +1,5 @@
 import React from 'react';
 import Buttons from './components/Buttons';
-import Box from './components/Box';
 import Grid from './components/Grid';
 
 
@@ -64,25 +63,10 @@ class App extends React.Component {
 			gridFull: grid,
 			generation: 0
 		});
+this.pauseButton();
 	}
 
-	gridSize = (size) => {
-		switch (size) {
-			case "1":
-				this.cols = 20;
-				this.rows = 10;
-			break;
-			case "2":
-				this.cols = 50;
-				this.rows = 30;
-			break;
-			default:
-				this.cols = 70;
-				this.rows = 50;
-		}
-		this.clear();
 
-	}
 
 	play = () => {
 		let g = this.state.gridFull;
@@ -126,7 +110,7 @@ class App extends React.Component {
 					fast={this.fast}
 					clear={this.clear}
 					seed={this.seed}
-					gridSize={this.gridSize}
+
 				/>
 				<Grid
 					gridFull={this.state.gridFull}
@@ -135,6 +119,7 @@ class App extends React.Component {
 					selectBox={this.selectBox}
 				/>
 				<h2>Generations: {this.state.generation}</h2>
+        <h3 className="himanshu">Design by - </h3>
 			</div>
 		);
 	}

@@ -20,7 +20,7 @@ body {
 }
 
 .box:hover {
-  background: #00CCFF; 
+  background: #00CCFF;
 }
 
 .center {
@@ -51,4 +51,13 @@ h4 {
 .btn{
   border-radius: 0;
 
+}
+.himanshu{
+  margin:10px auto;
+  color:black;
+}
+.himanshu::after{
+  content: "Himanshu sharma";
+  color:pink;
+  cursor: pointer;
 }
